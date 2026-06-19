@@ -607,4 +607,9 @@ $removeBtn.Add_Click({
 
 Refresh-List
 Update-HeadlineBanner
+
+# Run "Check All" automatically as soon as the window appears,
+# so launching the .cmd checks every project without a click.
+$form.Add_Shown({ $checkAllBtn.PerformClick() })
+
 [void]$form.ShowDialog()
